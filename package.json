@@ -1,0 +1,26 @@
+{
+    "name": "escrowtoken",
+    "version": "0.0.1",
+    "description": "Escrow Token Contract",
+    "main": "truffle.js",
+    "scripts": {
+        "compile": "truffle compile",
+        "migrate": "truffle migrate --network",
+        "test:escrow": "truffle compile && truffle test --network ganache ./test/contracts/Escrow/*.truffle.js --migrations_directory 0_no_migrations",
+        "test:token": "truffle compile && truffle test --network ganache ./test/contracts/EscrowToken/*.truffle.js --migrations_directory 0_no_migrations",
+        "start:ganache": "ganache-cli -m \"nephew apology bacon pelican country escape emerge prepare leave easily wrist wealth\" -h \"localhost\" -p 7545"
+    },
+    "directories": {
+        "test": "test"
+    },
+    "dependencies": {
+        "dotenv": "^8.1.0",
+        "ethers": "^4.0.36",
+        "mocha": "^6.2.0",
+        "openzeppelin-solidity": "^2.3.0",
+        "web3": "^1.2.1"
+    },
+    "devDependencies": {},
+    "author": "Konrad Piękoś",
+    "license": "MIT"
+}
